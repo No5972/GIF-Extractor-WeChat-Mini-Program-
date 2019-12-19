@@ -5,26 +5,33 @@
   <view class="flex-row" style="display:flex;">
   <button type="primary" style="width: 100px; display: inline-block;" class="flex-view-item" bindtap="importHandler">{{btn1}}</button>
   <button type="warn" style="width: 100px; display: inline-block;" class="flex-view-item" bindtap="resetHandler">{{btn2}}</button>
-  <button type="primary" style="width: 100px; display: inline-block; font-size: small" class="flex-view-item" bindtap="saveHandler">{{btn3}}</button>
+  </view>
+  <view class="flex-row" style="display:flex;">
+  <button type="primary" style="width: 100px; display: inline-block; font-size: small; background: darkblue" class="flex-view-item" bindtap="saveHandler">{{btn3}}</button>
+  <button type="primary" style="width: 100px; display: inline-block; font-size: small; background: silver" class="flex-view-item" bindtap="saveAllHandler">{{btn4}}</button>
   
   </view>
   <view class="" style="text-align: center">
     <image id="testShow" src="{{gifPath}}" mode="aspectFit" style="display: none;" ></image>
     <canvas canvas-id="renderer"  style="width: {{canvasWidth}}px; height: {{canvasWidth}}px; margin: 0 auto;"></canvas>
+    <canvas canvas-id="bufferCanvas" id="bufferCanvas" style="width: {{canvasWidth}}px; height: {{canvasWidth}}px; margin: 0 auto;" hidden="{{true}}"></canvas>
   </view><!-- ⏸⏵⏩⏪ ▐▶ ◀▌ -->
   <view id="toolBar" class="flex-row" style="display:flex; margin-top: 10px;">
-    <button style="width:75px; border: 1px solid; border-radius: 0">▶</button>
-    <button style="width:75px; border: 1px solid; border-radius: 0">▐▐</button>
+    <button style="width:75px; border: 1px solid; border-radius: 0" bindtap="playHandler">▶</button>
+    <button style="width:75px; border: 1px solid; border-radius: 0" bindtap="pauseHandler">▐▐</button>
     <button style="width:75px; border: 1px solid; border-radius: 0" bindtap="bwHandler">◀▌</button>
     <button style="width:75px; border: 1px solid; border-radius: 0" bindtap="fwHandler">▐▶</button>
     
   </view>
   <view> 
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker" style="padding: 20px; background-color: #0b0; border-radius: 2px ; margin: 10px; color: #fff">
+      <view class="picker" style="padding: 20px; background-color: silver; border-radius: 2px ; margin: 10px; ">
         当前帧: {{index}}
       </view>
     </picker>
+  </view>
+  <view style="width: 100%">
+  <slider bindchanging="slider4change" min="0" value="{{index}}" max="{{totalFrames}}"/>
   </view>
   <view style="font-size: small; text-align: center">
   matt-way/gifuct-js is licensed under the MIT License
