@@ -7,12 +7,9 @@
  */
 
 var giflib = require("gifuct-js.js");
-var figlib = require("fig.js");
 var upng = require("UPNG.js");
 var GIF = global.GIF;
 var gif;
-var FIG = global.fig;
-var figgif;
 var currentFrame = 0;
 var base64Strings = [];
 var allFrames = [];

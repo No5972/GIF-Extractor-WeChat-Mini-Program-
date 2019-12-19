@@ -34,10 +34,16 @@
   <slider bindchanging="slider4change" min="0" value="{{index}}" max="{{totalFrames}}"/>
   </view>
   <view style="font-size: small; text-align: center">
+  No5972/GIF-Extractor-WeChat-Mini-Program is licensed under the BSD 3-Clause "New" or "Revised" License
+  </view>
+  <view style="font-size: small; text-align: center">
   matt-way/gifuct-js is licensed under the MIT License
   </view>
   <view style="font-size: small; text-align: center">
-  © No.5972 © Matt Way
+  photopea/UPNG.js is licensed under the MIT License
+  </view>
+  <view style="font-size: small; text-align: center">
+  © No.5972
   </view>
 
   <img src="{{url1}}" rel:animated_src="{{url2}}" width="{{imgWidth}}" height="{{imgHeight}}" rel:auto_play="{{autoplay}}" />
