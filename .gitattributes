@@ -3,3 +3,5 @@ miniprogram/pages/index/gifuct-js.js linguist-vendored
 miniprogram/pages/index/pako.min.js linguist-vendored
 miniprogram/components/* linguist-vendored
 cloudfunctions/*  linguist-vendored
+*.wxss linguist-language=CSS
+*.wxml linguist-language=XML
